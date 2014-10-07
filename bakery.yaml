@@ -1,0 +1,8 @@
+commit: HEAD
+process_files: [SeoulHangang-Medium.ttf, SeoulHangang-Light.ttf, SeoulHangang-ExtraBold.ttf,
+  SeoulHangang-Bold.ttf, src/SeoulHangangM.otf, src/SeoulHangangL.otf, src/SeoulHangangEB.otf,
+  src/SeoulHangangCM.otf, src/SeoulHangangCL.otf, src/SeoulHangangCEB.otf, src/SeoulHangangCBL.otf,
+  src/SeoulHangangCB.otf, src/SeoulHangangB.otf, src/mobile/SeoulHangangB.ttf, src/mobile/SeoulHangang.ttf]
+pyftsubset: --notdef-outline --name-IDs=* --hinting
+subset: [latin]
+ttfautohint: -l 7 -r 28 -G 50 -x 13 -w "G"

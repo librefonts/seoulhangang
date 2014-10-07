@@ -1,0 +1,2284 @@
+Project:
+  error: []
+  failure:
+  - autofix: false
+    err_msg: File `FONTLOG.txt` does not exist in root of upstream repository
+    methodDoc: Repository does contain FONTLOG.txt file
+    methodName: test_fontlog_txt_exists
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: &id001 [upstream-repo]
+    tool: FontBakery
+  - autofix: false
+    err_msg: File `METADATA.json` does not exist in root of upstream repository
+    methodDoc: Repository does contain METADATA.json file
+    methodName: test_metadata_json_exists
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: *id001
+    tool: FontBakery
+  fixed: []
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that glyphs has same number of contours across family
+    methodName: test_font_prepolation_glyph_contours
+    name: bakery_lint.tests.upstream.test_prepolation
+    tags: [note]
+    targets: &id002 [upstream-repo]
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that glyphs has same number of points across family
+    methodName: test_font_prepolation_glyph_points
+    name: bakery_lint.tests.upstream.test_prepolation
+    tags: [note]
+    targets: *id002
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check glyph names are all the same across family
+    methodName: test_font_test_prepolation_glyph_names
+    name: bakery_lint.tests.upstream.test_prepolation
+    tags: [note]
+    targets: *id002
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that diacritic glyph are made completely with composite
+    methodName: test_diacritic_made_as_component
+    name: bakery_lint.tests.upstream.test_diacritic
+    tags: [note]
+    targets: &id003 [upstream-repo]
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that diacritic glyph are made completely with mark method
+    methodName: test_diacritic_made_as_mark_to_mark
+    name: bakery_lint.tests.upstream.test_diacritic
+    tags: [note]
+    targets: *id003
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Check that diacritic glyph are made completely with flat method
+    methodName: test_diacritic_made_as_own_glyphs
+    name: bakery_lint.tests.upstream.test_diacritic
+    tags: [note]
+    targets: *id003
+    tool: lint
+  - autofix: false
+    err_msg: ''
+    methodDoc: Repository does contain bakery.yaml configuration file
+    methodName: test_bakery_yaml_exists
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: *id001
+    tool: FontBakery
+  - autofix: false
+    err_msg: ''
+    methodDoc: Are all copyright notices the same in all styles?
+    methodName: test_copyright_notices_same_across_family
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: *id001
+    tool: FontBakery
+  - autofix: false
+    err_msg: ''
+    methodDoc: Repository does containDESCRIPTION.en_us.html file
+    methodName: test_description_html_exists
+    name: bakery_lint.tests.upstream.test_check_upstream_sources
+    tags: [note]
+    targets: *id001
+    tool: FontBakery
+SeoulHangang-Bold.ttf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Bold.ttf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: &id007 [note]
+    targets: &id008 [upstream]
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB-Regular.ttf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: &id009 [note]
+    targets: &id010 [upstream]
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB-Regular.ttf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: &id011 [note]
+    targets: &id004 [upstream]
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: &id012 [note]
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB-Regular.ttf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: &id013 [note]
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: &id014 [note]
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB-Regular.ttf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: &id015 [note]
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB-Regular.ttf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: &id016 [note]
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: &id017 [note]
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id005
+    autofix: true
+    err_msg: '''SeoulHangang-Bold'' != ''SeoulHangangB-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: &id018 [note]
+    targets: &id019 [upstream, upstream-ttx]
+    tool: lint
+  - *id005
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: &id021 [note]
+    targets: &id006 [upstream]
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: &id022 [note]
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: &id023 [note]
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: &id024 [note]
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: &id025 [note]
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: &id026 [note]
+    targets: *id006
+    tool: FontForge
+SeoulHangang-ExtraBold.ttf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-ExtraBold.ttf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB-Regular.ttf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB-Regular.ttf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB-Regular.ttf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB-Regular.ttf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB-Regular.ttf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id020
+    autofix: true
+    err_msg: '''SeoulHangang-ExtraBold'' != ''SeoulHangangEB-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id020
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangang-Light.ttf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Light.ttf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL-Regular.ttf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL-Regular.ttf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL-Regular.ttf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL-Regular.ttf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL-Regular.ttf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL-Regular.ttf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id027
+    autofix: true
+    err_msg: '''SeoulHangang-Light'' != ''SeoulHangangL-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id027
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangang-Medium.ttf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Medium.ttf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM-Regular.ttf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM-Regular.ttf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM-Regular.ttf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM-Regular.ttf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM-Regular.ttf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM-Regular.ttf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id028
+    autofix: true
+    err_msg: '''SeoulHangang-Medium'' != ''SeoulHangangM-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id028
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangang.ttf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang.ttf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Regular.ttf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Regular.ttf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Regular.ttf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Regular.ttf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Regular.ttf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-Regular.ttf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id029
+    autofix: true
+    err_msg: '''SeoulHangang'' != ''SeoulHangang-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id029
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangB.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-B.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-B.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-B.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-B.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-B.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-B.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-B.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-B.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id030
+    autofix: true
+    err_msg: '''SeoulHangangB'' != ''SeoulHangang-B'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id030
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangB.ttf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangB.ttf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangSmartB-Regular.ttf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangSmartB-Regular.ttf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangSmartB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangSmartB-Regular.ttf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangSmartB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangSmartB-Regular.ttf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangSmartB-Regular.ttf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangSmartB-Regular.ttf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id031
+    autofix: true
+    err_msg: '''SeoulHangangB'' != ''SeoulHangangSmartB-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id031
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangCB.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB-Regular.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB-Regular.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB-Regular.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB-Regular.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB-Regular.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB-Regular.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB-Regular.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCB-Regular.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id032
+    autofix: true
+    err_msg: '''SeoulHangangCB'' != ''SeoulHangangCB-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id032
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangCBL.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL-Regular.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL-Regular.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL-Regular.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL-Regular.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL-Regular.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL-Regular.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL-Regular.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCBL-Regular.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id033
+    autofix: true
+    err_msg: '''SeoulHangangCBL'' != ''SeoulHangangCBL-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id033
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangCEB.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB-Regular.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB-Regular.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB-Regular.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB-Regular.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB-Regular.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB-Regular.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB-Regular.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCEB-Regular.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id034
+    autofix: true
+    err_msg: '''SeoulHangangCEB'' != ''SeoulHangangCEB-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id034
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangCL.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL-Regular.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL-Regular.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL-Regular.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL-Regular.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL-Regular.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL-Regular.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL-Regular.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCL-Regular.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id035
+    autofix: true
+    err_msg: '''SeoulHangangCL'' != ''SeoulHangangCL-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id035
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangCM.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM-Regular.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM-Regular.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM-Regular.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM-Regular.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM-Regular.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM-Regular.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM-Regular.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangCM-Regular.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id036
+    autofix: true
+    err_msg: '''SeoulHangangCM'' != ''SeoulHangangCM-Regular'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id036
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangEB.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangEB.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-EB.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-EB.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-EB.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-EB.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-EB.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-EB.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-EB.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-EB.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id037
+    autofix: true
+    err_msg: '''SeoulHangangEB'' != ''SeoulHangang-EB'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id037
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangL.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangL.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-L.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-L.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-L.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-L.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-L.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-L.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-L.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-L.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id038
+    autofix: true
+    err_msg: '''SeoulHangangL'' != ''SeoulHangang-L'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id038
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
+SeoulHangangM.otf:
+  error:
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangangM.otf.
+      This file is required.
+    methodDoc: A Unicode value should appear only once per font
+    methodName: testUnicodeValue
+    name: bakery_lint.tests.upstream.test_unicode_value_should_appear_only_once_per_font
+    tags: *id007
+    targets: *id008
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-M.otf.
+      This file is required.
+    methodDoc: In font there shouldn't be too many overlapping contours
+    methodName: test_contour_count
+    name: bakery_lint.tests.upstream.test_contour_count
+    tags: *id009
+    targets: *id010
+    tool: lint
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-M.otf.
+      This file is required.
+    methodDoc: '''ascii'' codec can''t encode character u''\u20b9'' in position 35:
+      ordinal not in range(128)'
+    methodName: test_has_rupee
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id011
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-M.otf.
+      This file is required.
+    methodDoc: Does this font have a glyph named 'A'?
+    methodName: test_is_A
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id012
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-M.otf.
+      This file is required.
+    methodDoc: Is this font's property A an instance of an RGlyph object?
+    methodName: test_is_A_a_glyph_instance
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id013
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-M.otf.
+      This file is required.
+    methodDoc: Does this font file's name end with '.ufo'?
+    methodName: test_is_ended_ufo
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id014
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-M.otf.
+      This file is required.
+    methodDoc: Is this UFO really a folder?
+    methodName: test_is_folder
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id015
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-M.otf.
+      This file is required.
+    methodDoc: Is the OS/2 table fsType set to 0?
+    methodName: test_is_fsType_eq_1
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id016
+    targets: *id004
+    tool: Robofab
+  - autofix: false
+    err_msg: metainfo.plist is missing in /home/travis/build/fontdirectory/seoulhangang/builds/build/sources/SeoulHangang-M.otf.
+      This file is required.
+    methodDoc: Does this UFO path exist?
+    methodName: test_it_exists
+    name: bakery_lint.tests.upstream.test_check_ufo_requirements
+    tags: *id017
+    targets: *id004
+    tool: Robofab
+  failure: []
+  fixed:
+  - &id039
+    autofix: true
+    err_msg: '''SeoulHangangM'' != ''SeoulHangang-M'''
+    methodDoc: Source TTF Font filename equals family style
+    methodName: test_source_ttf_font_filename_equals_familystyle
+    name: bakery_lint.tests.upstream.test_font_filename_eq_familystyle
+    tags: *id018
+    targets: *id019
+    tool: lint
+  - *id039
+  passed: true
+  success:
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_familyname_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id021
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_fullfontname_less_than_64_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id022
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_consistof_allowed_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id023
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_postscriptname_less_than_30_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id024
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_stylename_less_than_32_chars
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id025
+    targets: *id006
+    tool: FontForge
+  - autofix: false
+    err_msg: ''
+    methodDoc: None
+    methodName: test_weight_value_range_between_250_and_900
+    name: bakery_lint.tests.upstream.test_check_ufo_fontfamily_recommendations
+    tags: *id026
+    targets: *id006
+    tool: FontForge
